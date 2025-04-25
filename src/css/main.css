@@ -2,17 +2,13 @@
 .container-fluid {
   padding-bottom: 40px;
   background-color: #111;
-  /* 배경색 설정 */
 }
 
 /* 프로필 전체 영역 */
 .profile-section {
   display: flex;
-  /* 이미지와 텍스트를 가로로 배치 */
   align-items: center;
-  /* 세로로 중앙 정렬 */
   margin-bottom: 40px;
-  /* 이미지와 텍스트 간격 */
 }
 
 /* 프로필 이미지 스타일 */
