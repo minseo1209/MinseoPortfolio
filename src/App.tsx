@@ -7,7 +7,7 @@ import './App.css'
 
 function App () {
   return (
-<Router> {/* Router로 감싸기 */}
+<Router basename="/"> 
       <Container fluid className="bg-dark">
         <Row>
           <Col md={2} className="p-0">
@@ -15,9 +15,7 @@ function App () {
           </Col>
           <Col md={10}>
             <Routes>
-              {/* MainPage는 "/" 경로로 렌더링 */}
               <Route path="/" element={<MainPage />} /> 
-              {/* Contact 페이지는 "/contact" 경로로 렌더링 */}
               <Route path="/contact" element={<Contact />} /> 
             </Routes>
           </Col>
