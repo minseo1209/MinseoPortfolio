@@ -4,13 +4,13 @@ import react from '@vitejs/plugin-react';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', 
+  base: './',  
   build: {
     rollupOptions: {
       external: [],  
     },
   },
   optimizeDeps: {
-    include: ['react-bootstrap', 'react-router-dom', 'react-icons/fa'], 
+    include: ['react-bootstrap', 'react-router-dom', 'react-icons/fa'],  
   },
 });
