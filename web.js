@@ -10,7 +10,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-const PORT = process.env.PORT || 8001;  // 카페24 제공 포트 사용
+// 서버 포트 설정
+const PORT = process.env.PORT || 8001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
