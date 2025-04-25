@@ -2,7 +2,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Sidebar from './components/Sidebar';
 import MainPage from './page/main';
 import Contact from './page/Contact'; 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
 
