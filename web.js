@@ -1,22 +1,15 @@
-const express = require("express");
+const express = require('express');
+const path = require('path');
 const app = express();
-const path = require("path");
-const PORT = 8001;
 
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, 'build')));
 
-app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/build/index.html");
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.get("/faq", function (req, res) {
-  res.sendFile(__dirname + "/build/index.html");
-});
-
-app.get("/curriculum", function (req, res) {
-  res.sendFile(__dirname + "/build/index.html");
-});
-
+// 서버 포트 설정
+const PORT = process.env.PORT || 8001;  
 app.listen(PORT, () => {
-  console.log(`server started on PORT ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
