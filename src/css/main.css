@@ -1,0 +1,99 @@
+/* 본문 컨텐츠 영역 */
+.container-fluid {
+  padding-bottom: 40px;
+  background-color: #111;
+  /* 배경색 설정 */
+}
+
+/* 프로필 전체 영역 */
+.profile-section {
+  display: flex;
+  /* 이미지와 텍스트를 가로로 배치 */
+  align-items: center;
+  /* 세로로 중앙 정렬 */
+  margin-bottom: 40px;
+  /* 이미지와 텍스트 간격 */
+}
+
+/* 프로필 이미지 스타일 */
+.profile-image {
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* 프로필 텍스트 스타일 */
+.profile-text {
+  text-align: left;
+  color: #fff;
+
+}
+
+.profile-text h2 {
+  font-size: 2.5rem;
+  /* 이름의 폰트 크기 */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.profile-text p {
+  font-size: 1.3rem;
+  /* 생년월일 폰트 크기 */
+  margin-bottom: 1rem;
+}
+
+.profile-text .badge {
+  font-size: 1.1rem;
+  /* 배지 폰트 크기 */
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.profile-text .mt-3 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Skills 영역 */
+.skill{
+  text-align: left;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #fff;
+}
+
+h5 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #ccc;
+}
+
+.badge-light {
+  padding: 0.3em;
+  color: #fff;
+  margin-left: 0.4em;
+  font-size: 14px;
+  border-radius: 0.3em;
+}
+
+.d-flex {
+  margin-top: 10px;
+}
+
+/* 본문 컨텐츠 영역 - 사이드바 옆에 80% 너비로 배치 */
+.main-content {
+  margin-left: 250px;
+  /* 사이드바 너비만큼 왼쪽 여백 */
+  width: calc(100% - 250px);
+  /* 화면에서 사이드바 너비를 제외한 나머지 공간 차지 */
+  padding: 20px;
+  color: #fff;
+  background-color: #111;
+}

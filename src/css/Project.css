@@ -1,0 +1,103 @@
+.project-container {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 20px;
+  color: #fff;
+  background-color: #111;
+}
+.ProjectsTitle{
+  text-align: left;
+
+}
+
+/* 제목 스타일 */
+.project-container h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* 각 프로젝트 항목 */
+.project-item {
+  text-align: left;
+  background-color: #1c1c1c;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.project-item h2 {
+  font-size: 1.8rem;
+  color: #eaeaea;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cfcfcf;
+}
+
+/* 리스트 항목 스타일 */
+.project-item ul {
+  margin-left: 20px;
+}
+
+.project-item ul li {
+  font-size: 1rem;
+  color: #cfcfcf;
+}
+
+/* 기술 스택 배경색 */
+.project-item .tech-stack span {
+  background-color: #3d3d3d;
+  padding: 5px 10px;
+  margin-right: 8px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.project-item .tech-stack span:hover {
+  background-color: #555;
+}
+
+/* 타이틀과 섹션 구분 */
+.project-item .section-title {
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+/* Git */
+.git-button {
+  background-color: #3d3d3d;
+  padding: 5px 10px;
+  margin-right: 8px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+.git-button:hover {
+  background-color: #555;
+}
+
+
+/* 모바일 및 작은 화면에서 반응형 설정 */
+@media (max-width: 768px) {
+  .project-container h1 {
+    font-size: 2rem;
+  }
+
+  .project-item {
+    padding: 15px;
+  }
+
+  .project-item h2 {
+    font-size: 1.5rem;
+  }
+}
