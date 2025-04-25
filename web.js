@@ -1,5 +1,6 @@
-const express = require('express');
-const path = require('path');
+import express from 'express';
+import path from 'path';
+
 const app = express();
 
 // Vite로 빌드된 파일들이 있는 dist 폴더를 서빙
@@ -13,5 +14,5 @@ app.get('*', (req, res) => {
 // 서버 포트 설정
 const PORT = process.env.PORT || 8001;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
