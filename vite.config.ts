@@ -17,3 +17,4 @@ export default defineConfig({
     allowedHosts: ['devserver-main--keen-gecko-0e426e.netlify.app'],
   },
 });
+   
