@@ -1,28 +1,23 @@
-import { Container, Row, Col } from 'react-bootstrap';
 import Sidebar from './components/Sidebar';
 import MainPage from './page/main';
-import Contact from './page/Contact'; 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css'
+import Contact from './page/Contact';
+import { Container, Row, Col } from 'react-bootstrap';
+import './App.css';
 
-function App () {
+function App() {
   return (
-<Router> 
-      <Container fluid className="bg-dark">
-        <Row>
-          <Col md={2} className="p-0">
-            <Sidebar />
-          </Col>
-          <Col md={10}>
-            <Routes>
-              <Route path="/" element={<MainPage />} /> 
-              <Route path="/contact" element={<Contact />} /> 
-            </Routes>
-          </Col>
-        </Row>
-      </Container>
-    </Router>
+    <Container fluid className="bg-dark">
+      <Row>
+        <Col md={2} className="p-0">
+          <Sidebar />
+        </Col>
+        <Col md={10}>
+          <MainPage />
+          <Contact />
+        </Col>
+      </Row>
+    </Container>
   );
-};
+}
 
 export default App;

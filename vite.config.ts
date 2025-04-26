@@ -6,11 +6,11 @@ export default defineConfig({
   base: './',
   build: {
     rollupOptions: {
-      external: ['react-router-dom'], 
+      external: [], 
     },
   },
   optimizeDeps: {
-    include: ['react-bootstrap', 'react-router-dom', 'react-icons/fa'],
+    include: ['react-bootstrap', 'react-icons/fa'],
   },
   server: {
     allowedHosts: ['devserver-main--keen-gecko-0e426e.netlify.app'],
