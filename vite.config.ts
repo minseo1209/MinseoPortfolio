@@ -1,20 +1,18 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './',  
+  base: './',
   build: {
     rollupOptions: {
-      external: [],  
+      external: ['react-router-dom'], 
     },
   },
   optimizeDeps: {
-    include: ['react-bootstrap', 'react-router-dom', 'react-icons/fa'],  
+    include: ['react-bootstrap', 'react-router-dom', 'react-icons/fa'],
   },
-   server: {
+  server: {
     allowedHosts: ['devserver-main--keen-gecko-0e426e.netlify.app'],
   },
 });
-   
