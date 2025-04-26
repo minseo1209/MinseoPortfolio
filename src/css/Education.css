@@ -52,16 +52,13 @@
 @media (max-width: 768px) {
   .education {
     margin-left: 0;
-    /* margin-left를 없애고 */
     width: 100%;
-    /* 전체 너비로 변경 */
-    padding: 15px;
+    padding: 0px;
   }
 
   .education h2 {
     font-size: 2rem;
     text-align: center;
-    /* 제목을 중앙 정렬 */
   }
 
   .education-item {
@@ -75,11 +72,9 @@
   .education-item .major,
   .education-item .period {
     font-size: 1rem;
-    /* 글자 크기 줄이기 */
   }
 
   .education-item .section-title {
     font-size: 0.9rem;
-    /* 항목 구분 글자 크기 줄이기 */
   }
 }

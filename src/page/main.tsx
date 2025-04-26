@@ -14,9 +14,7 @@ function MainContent() {
         <Education/>
         <Certificate/>
       </div>
-      <div id="contact" >
-        <div style={{ padding: '40px', color: 'white' }}></div>
-      </div>
+
     </>
   );
 }

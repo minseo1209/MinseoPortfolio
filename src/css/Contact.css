@@ -5,7 +5,9 @@
   align-items: center;
   margin-top: 20px;
 }
-
+.list {
+  color: white;
+}
 .contact-item {
   display: flex;
   align-items: center;
