@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Nav } from 'react-bootstrap';
-import { Link, useLocation } from 'react-router-dom'; // React Router Link 추가
-import '../css/Sidebar.css'; // 필요 시 유지
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import '../css/Sidebar.css';
 
 // 부드러운 스크롤 이동 함수
 const navigateToSection = (id: string) => {
@@ -13,7 +13,8 @@ const navigateToSection = (id: string) => {
 
 function Sidebar() {
   const [activeSection, setActiveSection] = useState<string>('');
-  const location = useLocation(); // 현재 URL을 가져옴
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,13 +22,11 @@ function Sidebar() {
       const sections = ['home', 'projects', 'contact'];
       let current = '';
 
-      // 각 섹션에 대한 현재 위치를 확인하여 activeSection을 업데이트
       for (let i = 0; i < sections.length; i++) {
         const el = document.getElementById(sections[i]);
         if (el) {
           const top = el.offsetTop;
           const bottom = top + el.offsetHeight;
-
           if (scrollY >= top && scrollY < bottom) {
             current = sections[i];
             break;
@@ -35,30 +34,36 @@ function Sidebar() {
         }
       }
 
-      setActiveSection(current); // activeSection 상태 업데이트
+      setActiveSection(current);
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // 초기화 시에도 실행
+    handleScroll(); // 초기화
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 페이지 이동 후 특정 섹션으로 부드럽게 스크롤
   useEffect(() => {
     if (location.hash) {
-      const sectionId = location.hash.substring(1); // URL의 해시 부분만 추출
-      navigateToSection(sectionId); // 해당 섹션으로 이동
+      const sectionId = location.hash.substring(1);
+      navigateToSection(sectionId);
     }
-  }, [location]); // URL 변경 시마다 실행
+  }, [location]);
+
+  // 🔥 About, Projects 클릭 핸들러
+  const handleNavigateAndScroll = (targetId: string) => {
+    navigate('/'); // 메인으로 이동
+    setTimeout(() => {
+      navigateToSection(targetId); // 해당 섹션으로 스크롤
+    }, 100); // 약간 기다렸다 스크롤
+  };
 
   return (
     <div className="sidebar">
       <Nav className="flex-column">
         {/* About 섹션 */}
         <Nav.Link
-          as={Link} // React Router Link 사용
-          to="/#home" // / 페이지의 home 섹션으로 이동
+          onClick={() => handleNavigateAndScroll('home')}
           className={activeSection === 'home' ? 'nav-link active' : 'nav-link'}
         >
           About
@@ -66,17 +71,16 @@ function Sidebar() {
 
         {/* Projects 섹션 */}
         <Nav.Link
-          as={Link} // React Router Link 사용
-          to="/#projects" // / 페이지의 projects 섹션으로 이동
+          onClick={() => handleNavigateAndScroll('projects')}
           className={activeSection === 'projects' ? 'nav-link active' : 'nav-link'}
         >
           Projects
         </Nav.Link>
 
-        {/* Contact 페이지로 이동하는 링크 */}
+        {/* Contact 페이지 */}
         <Nav.Link
-          as={Link} // React Router Link 사용
-          to="/contact" // /contact 페이지로 이동
+          as={Link}
+          to="/contact"
           className={activeSection === 'contact' ? 'nav-link active' : 'nav-link'}
         >
           Contact

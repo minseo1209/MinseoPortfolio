@@ -7,7 +7,7 @@ import './App.css'
 
 function App () {
   return (
-<Router basename="/"> 
+<Router> 
       <Container fluid className="bg-dark">
         <Row>
           <Col md={2} className="p-0">
