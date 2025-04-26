@@ -11,9 +11,10 @@ const __dirname = path.dirname(__filename)
 // 정적 파일 서빙
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('/*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)
