@@ -4,7 +4,7 @@ import { projects } from '../data/projects';
 interface Project {
   title: string;
   period: string;
-  description?: string[];  // description이 선택적임
+  description?: string[];  
   techStack: string[];
   gitLink?: string;
   url?: string;  
@@ -14,7 +14,7 @@ interface Project {
   targetUser?: string;  
   platform?: string;  
   userInteraction?: string;  
-  responsibilities?: { title: string; details: string[] }[];  // responsibilities 추가
+  responsibilities?: { title: string; details: string[] }[];  
 }
 
 const Project = ({ project }: { project: Project }) => {

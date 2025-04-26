@@ -1,4 +1,4 @@
-/* Contact 페이지 스타일 */
+/* 기본 Contact 페이지 스타일 */
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -29,4 +29,32 @@
 
 .contact-item a:hover {
   text-decoration: underline;
+}
+
+/* 모바일 버전 */
+@media (max-width: 768px) {
+
+  .contact-info {
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .contact-item p {
+    font-size: 1rem;
+  }
+
+  .contact-item a {
+    font-size: 1rem;
+  }
+
+  .contact-details {
+    margin-left: 0;
+    margin-top: 5px;
+  }
 }

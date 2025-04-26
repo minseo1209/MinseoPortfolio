@@ -24,25 +24,21 @@
 .profile-text {
   text-align: left;
   color: #fff;
-
 }
 
 .profile-text h2 {
   font-size: 2.5rem;
-  /* 이름의 폰트 크기 */
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .profile-text p {
   font-size: 1.3rem;
-  /* 생년월일 폰트 크기 */
   margin-bottom: 1rem;
 }
 
 .profile-text .badge {
   font-size: 1.1rem;
-  /* 배지 폰트 크기 */
   margin-right: 5px;
   margin-bottom: 10px;
 }
@@ -54,7 +50,7 @@
 }
 
 /* Skills 영역 */
-.skill{
+.skill {
   text-align: left;
 }
 
@@ -86,10 +82,52 @@ h5 {
 /* 본문 컨텐츠 영역 - 사이드바 옆에 80% 너비로 배치 */
 .main-content {
   margin-left: 250px;
-  /* 사이드바 너비만큼 왼쪽 여백 */
   width: calc(100% - 250px);
-  /* 화면에서 사이드바 너비를 제외한 나머지 공간 차지 */
   padding: 20px;
   color: #fff;
   background-color: #111;
+}
+
+/* 모바일 및 작은 화면에서 반응형 설정 */
+@media (max-width: 768px) {
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .profile-text h2 {
+    font-size: 2rem;
+  }
+
+  .profile-text p {
+    font-size: 1.1rem;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    text-align: center;
+  }
+
+  .badge-light {
+    font-size: 12px;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
 }

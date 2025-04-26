@@ -1,3 +1,4 @@
+/* 기본 프로젝트 컨테이너 */
 .project-container {
   font-family: 'Arial', sans-serif;
   margin: 20px;
@@ -7,9 +8,9 @@
   color: #fff;
   background-color: #111;
 }
-.ProjectsTitle{
-  text-align: left;
 
+.ProjectsTitle {
+  text-align: left;
 }
 
 /* 제목 스타일 */
@@ -73,7 +74,8 @@
   margin-bottom: 10px;
   font-weight: bold;
 }
-/* Git */
+
+/* Git 버튼 */
 .git-button {
   background-color: #3d3d3d;
   padding: 5px 10px;
@@ -82,16 +84,24 @@
   font-size: 0.9rem;
   color: #fff;
 }
+
 .git-button:hover {
   background-color: #555;
 }
 
-
 /* 모바일 및 작은 화면에서 반응형 설정 */
 @media (max-width: 768px) {
+
+  .project-container {
+    margin-left: 0;
+    width: 100%;
+    padding: 15px;
+  }
+
   .project-container h1 {
     font-size: 2rem;
   }
+
 
   .project-item {
     padding: 15px;
@@ -99,5 +109,24 @@
 
   .project-item h2 {
     font-size: 1.5rem;
+  }
+
+  .project-item p {
+    font-size: 1rem;
+  }
+
+  .project-item ul li {
+    font-size: 0.9rem;
+  }
+
+  .project-item .tech-stack span {
+    font-size: 0.8rem;
+  }
+
+  .git-button {
+    font-size: 0.8rem;
+  }
+  .project-item .tech-stack {
+    display: none;
   }
 }
