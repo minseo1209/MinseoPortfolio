@@ -13,4 +13,7 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react-bootstrap', 'react-router-dom', 'react-icons/fa'],  
   },
+   server: {
+    allowedHosts: ['devserver-main--keen-gecko-0e426e.netlify.app'],
+  },
 });
